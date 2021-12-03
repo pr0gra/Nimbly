@@ -478,26 +478,51 @@ html {
 }
 
 body {
-  /* width: 1170px; */
   font-family: Poppins;
   margin: 0 auto;
 }
 
 .background-hero {
-  min-width: 100%;
-  background-image: url(assets/background-header.svg);
-  background-repeat: no-repeat;
-  height: 740px;
-  position: absolute;
+  position: relative;
+  width: 100%;
 }
 
-.background-our-features,
+.background-hero::before {
+  width: 100%;
+  background-image: url(assets/background-header.svg);
+  background-repeat: no-repeat;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  border-top: 1px solid #DEDEDE;
+  z-index: -2;
+  content: "";
+  background-size: cover;
+}
+
 .background-header,
 .background-customer-say {
   position: absolute;
   width: 100%;
   left: 0;
   z-index: -2;
+}
+
+.background-our-features {
+  position: relative;
+}
+
+.background-our-feature::before {
+  background-image: url(assets/background-our-features.svg);
+  background-repeat: no-repeat;
+  width: 100%;
+  position: absolute;
+}
+
+.background-customer-say {
+  top: 4816px;
 }
 
 .page-width {
@@ -543,10 +568,10 @@ h4 {
 
 header {
   height: 85px;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border-bottom: 1px solid #DEDEDE;
 }
 
 .header-left-part {
@@ -630,17 +655,19 @@ header {
   margin-bottom: 24px;
 }
 
+.main-mobile {
+  display: none;
+}
+
+
 .main-left-part p {
   margin-bottom: 32px;
 }
 
 .main-left-part h1 {
-  color: #333333;
+
   margin-bottom: 16px;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 48px;
-  line-height: 72px;
+  
 }
 
 .main-left-part h1 span {
@@ -668,7 +695,7 @@ header {
 .main-companies {
   color: #13ab4e;
   text-align: center;
-  margin-bottom: 100px;
+  padding-bottom: 100px;
 }
 
 .main-companies ul {
@@ -714,8 +741,8 @@ header {
 .our-features ul li button {
   border: none;
   height: 66px;
-  padding-right: 39.3px;
-  padding-left: 43px;
+  padding-right: 34px;
+  padding-left: 34px;
   border-radius: 75px;
   background-color: #b4f1cb;
   font-size: 15px;
@@ -754,6 +781,16 @@ header {
   margin-right: 8px;
 }
 
+
+.our-features ul li button { 
+  font-family: Poppins;
+font-style: normal;
+font-weight: normal;
+font-size: 14px;
+line-height: 21px;
+}
+
+
 .our-features ul li a {
   text-decoration: none;
   font-style: normal;
@@ -766,7 +803,6 @@ header {
 .our-features-statistic {
   display: flex;
   margin-bottom: 100px;
-  
 }
 
 .our-features-statistic div {
@@ -932,11 +968,14 @@ header {
   padding: 28px 0;
   border-bottom: 1px solid #dedede;
   cursor: pointer;
+  align-items: center;
+  /* position: relative; */
 }
 
 .industries-button-bottom p {
   font-size: 24px;
   line-height: 20px;
+  /* position: absolute; */
 }
 
 .industries-link button {
@@ -1082,6 +1121,7 @@ header {
   justify-content: space-between;
   align-items: center;
   border-radius: 8px;
+  margin-top: 12px;
 }
 
 .nimbly-form-select-industry p {
@@ -1096,15 +1136,6 @@ header {
   padding: 0px;
 }
 
-.nimbly-form-table li p {
-  font-style: normal;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 24px;
-  margin-bottom: 12px;
-  margin-top: 16px;
-}
-
 .nimbly-form-table li input {
   height: 64px;
   width: 527px;
@@ -1113,6 +1144,8 @@ header {
   font-size: 16px;
   padding-left: 24px;
   border-radius: 8px;
+  margin-top: 12px;
+  margin-bottom: 16px;
 }
 
 .nimbly-form-button {
@@ -1178,7 +1211,6 @@ header {
   font-weight: normal;
   font-size: 14px;
   line-height: 21px;
-  /* margin-bottom: 56px; */
 }
 
 .footer-about-us,
@@ -1222,4 +1254,81 @@ header {
   line-height: 21px;
   color: #bfbfbf;
   margin: 0;
+}
+
+@media (max-width: 768px) {
+
+  body {
+    margin: 0 auto;
+  }
+
+  .page-width {
+    width: 375px;
+    margin: 0 auto;
+  }
+
+  header {
+    display: none;
+  }
+
+  .main {
+    display: none;
+  }
+
+  .main-mobile {
+    display: block;
+  }
+
+
+  p {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 24px;
+  }
+  
+  h1,
+  h2 {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 36px;
+  }
+  
+  h3 {
+    color: #13ab4e;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 36px;
+  }
+  
+  h4 {
+    color: #333333;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 30px;
+    margin-bottom: 16px;
+  }
+  
+  .main-left-part div {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .main-left-part div button {
+    margin: 0 auto;
+  }
+
+  .button-request-demo {
+    width: 310px;
+    height: 48px;
+  }
+}
+
+@media (min-width:768px) {
+  
 }
