@@ -1258,13 +1258,9 @@ line-height: 21px;
 
 @media (max-width: 768px) {
 
-  body {
-    margin: 0 auto;
-  }
-
   .page-width {
-    width: 375px;
-    margin: 0 auto;
+    width: calc(100% - 38px * 2);
+    margin: 0 auto 38px ;
   }
 
   header {
@@ -1278,7 +1274,6 @@ line-height: 21px;
   .main-mobile {
     display: block;
   }
-
 
   p {
     font-family: Poppins;
@@ -1313,15 +1308,26 @@ line-height: 21px;
     line-height: 30px;
     margin-bottom: 16px;
   }
-  
+
+
   .main-left-part div {
     display: flex;
     flex-direction: column;
+    width: 310px;
   }
 
-  .main-left-part div button {
-    margin: 0 auto;
+
+  .right-button-hero {
+    margin-left: -24px;
   }
+
+
+  .main-right-part img {
+    margin-top: -25px;
+    position: relative;
+    left: -25px;
+}
+}
 
   .button-request-demo {
     width: 310px;
