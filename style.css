@@ -496,7 +496,7 @@ body {
   width: 100%;
   top: 0;
   left: 0;
-  border-top: 1px solid #DEDEDE;
+  border-top: 1px solid #dedede;
   z-index: -2;
   content: "";
   background-size: cover;
@@ -571,7 +571,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid #DEDEDE;
+  border-bottom: 1px solid #dedede;
 }
 
 .header-left-part {
@@ -659,15 +659,12 @@ header {
   display: none;
 }
 
-
 .main-left-part p {
   margin-bottom: 32px;
 }
 
 .main-left-part h1 {
-
   margin-bottom: 16px;
-  
 }
 
 .main-left-part h1 span {
@@ -781,15 +778,13 @@ header {
   margin-right: 8px;
 }
 
-
-.our-features ul li button { 
+.our-features ul li button {
   font-family: Poppins;
-font-style: normal;
-font-weight: normal;
-font-size: 14px;
-line-height: 21px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 21px;
 }
-
 
 .our-features ul li a {
   text-decoration: none;
@@ -1257,10 +1252,13 @@ line-height: 21px;
 }
 
 @media (max-width: 768px) {
+  body {
+    width: 375px;
+  }
 
   .page-width {
     width: calc(100% - 38px * 2);
-    margin: 0 auto 38px ;
+    margin: 0 auto 38px;
   }
 
   header {
@@ -1275,6 +1273,14 @@ line-height: 21px;
     display: block;
   }
 
+  .hero-text-under {
+    display: none;
+  }
+
+  .video {
+    display: none;
+  }
+
   p {
     font-family: Poppins;
     font-style: normal;
@@ -1282,24 +1288,24 @@ line-height: 21px;
     font-size: 12px;
     line-height: 24px;
   }
-  
+
   h1,
   h2 {
     font-family: Poppins;
     font-style: normal;
     font-weight: 600;
-    font-size: 24px;
+    font-size: 23px;
     line-height: 36px;
   }
-  
+
   h3 {
-    color: #13ab4e;
+    font-family: Poppins;
     font-style: normal;
     font-weight: 600;
-    font-size: 20px;
-    line-height: 36px;
+    font-size: 12px;
+    line-height: 18px;
   }
-  
+
   h4 {
     color: #333333;
     font-style: normal;
@@ -1309,32 +1315,107 @@ line-height: 21px;
     margin-bottom: 16px;
   }
 
-
   .main-left-part div {
     display: flex;
     flex-direction: column;
     width: 310px;
   }
 
-
   .right-button-hero {
     margin-left: -24px;
   }
 
-
   .main-right-part img {
-    margin-top: -25px;
+    margin-top: -10px;
     position: relative;
     left: -25px;
-}
-}
+  }
 
   .button-request-demo {
     width: 310px;
     height: 48px;
   }
+
+  .hero-text-under-mobile {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 18px;
+    margin-bottom: 20px;
+  }
+
+  .main-companies {
+    margin-bottom: -44px;
+  }
+
+  .main-companies ul {
+    flex-wrap: wrap;
+    
+  }
+
+  .kfc {
+    width: 122.52px;
+    height: 41.84px;
+  }
+
+  .cargill {
+    width: 97.71px;
+    height: 44.23px;
+  }
+
+  .seleven {
+    width: 33.67px;
+    height: 43.57px;
+  }
+
+  .underarmour {
+    width: 67.54px;
+    height: 39.45px;
+  }
+
+  .dq {
+    width: 59.17px;
+    height: 41.24px;
+  }
+  .toto {
+    width: 122.52px;
+    height: 41.84px;
+  }
+
+  .video-mobile {
+    text-align: center;
+  }
+
+  .video-mobile img {
+    width: 100%;
+    height: 193.38px;
+  }
+
+  .video-mobile h3 {
+    margin-bottom: 13px;
+  }
+
+  .video-mobile h2 {
+    margin-bottom: 8px;
+  }
+
+  .our-features {
+    display: none;
+  }
+
 }
 
-@media (min-width:768px) {
-  
+@media (min-width: 768px) {
+  .hero-text-under-mobile {
+    display: none;
+  }
+
+  .video-mobile {
+    display: none;
+  }
+
+  .our-features-mobile {
+    display: none;
+  }
 }
